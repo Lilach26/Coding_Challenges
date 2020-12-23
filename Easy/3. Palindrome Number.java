@@ -45,7 +45,6 @@ public class PalindromeNumber
 		if (result == x || result / 10 == x)
 			return true;
 		return false;
-		
 	}
 	
 	public static void main(String[] args)
