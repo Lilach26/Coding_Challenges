@@ -26,7 +26,6 @@ Constraints:
 -231 <= x <= 231 - 1
 */
 
-
 public class ReverseInteger 
 {
 	public int reverse(int x)
