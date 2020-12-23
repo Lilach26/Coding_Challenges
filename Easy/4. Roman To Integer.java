@@ -73,7 +73,6 @@ public class RomanToInteger
 			else
 				result += map.get(s.charAt(i));
 		}
-		
 		return result;
 	}
 	
