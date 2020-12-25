@@ -29,6 +29,8 @@ nums contains distinct values sorted in ascending order.
 -104 <= target <= 104
 */
 
+// Using Binary Search that returns the l position instead of mid potision - runtime O(log(n))
+
 public class SearchInsertPosition 
 {
 	public int searchInsert(int[] nums, int target) 
