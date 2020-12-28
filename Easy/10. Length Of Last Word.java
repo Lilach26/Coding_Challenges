@@ -23,12 +23,12 @@ public class LengthOfLastWord
 		s = s.trim();
 		int i, len = s.length();
         
-        if(len == 0)
+        if (len == 0)
             return 0;
         
-        for(i = len-1; i >= 0; i--)
+        for (i = len-1; i >= 0; i--)
         {
-            if(s.charAt(i) == ' ')
+            if (s.charAt(i) == ' ')
                 return len - i - 1;
         }
         
