@@ -15,15 +15,15 @@ class Solution
 		
 	while (num > 0)
 	{
-		result += num % 10;
-		num /= 10;
+	result += num % 10;
+	num /= 10;
 			
-		if (num == 0 && result > 9)
-		{
-			num = result;
-			result = 0;
-		}
+	if (num == 0 && result > 9)
+	{
+		num = result;
+		result = 0;
 	}
-	return result;    
+}
+return result;    
     }
 }
