@@ -26,8 +26,8 @@ Follow up: Could you solve it without loops/recursion?
 
 public class Solution 
 {
-	public boolean isPowerOfThree(int n) 
+    public boolean isPowerOfThree(int n) 
     {
-		return (Math.log10(n) / Math.log10(3)) % 1 == 0;
+	return (Math.log10(n) / Math.log10(3)) % 1 == 0;
     }
 }
