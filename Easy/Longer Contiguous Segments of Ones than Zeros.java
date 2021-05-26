@@ -32,7 +32,8 @@ Constraints:
 s[i] is either '0' or '1'.
 */
 
-class Solution {
+class Solution 
+{
     public boolean checkZeroOnes(String s) 
     {
         int countZero = 0, countOne = 0, maxZero = 0, maxOne = 0;
