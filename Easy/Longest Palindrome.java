@@ -57,3 +57,32 @@ class Solution
         return maxPalindrome;
     }
 }
+
+
+// Another solution:
+
+class Solution 
+{
+    public int longestPalindrome(String s) 
+    {
+        int[] counter = new int[128];
+        int maxPalindrome = 0;
+        
+        for (char letter : s.toCharArray())
+        {
+            counter[letter]++;
+        }
+        
+        for (int value : counter)
+        {
+            maxPalindrome += value / 2 * 2;
+            
+            if (maxPalindrome % 2 == 0 && value % 2 == 1)
+            {
+                maxPalindrome++;
+            }
+        }
+        
+        return maxPalindrome;
+    }
+}
