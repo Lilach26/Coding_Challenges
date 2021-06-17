@@ -51,3 +51,33 @@ class Solution
         }
     }
 }
+
+// another solution:
+
+class Solution 
+{
+    public void sortColors(int[] nums) 
+    {
+        int first = 0, current = 0, last = nums.length - 1, temp;
+        
+        while (current <= last)
+        {
+            if (nums[current] == 0)
+            {
+                temp = nums[current];
+                nums[current++] = nums[first];
+                nums[first++] = temp;
+            }
+            else if (nums[current] == 2)
+            {
+                temp = nums[current];
+                nums[current] = nums[last];
+                nums[last--] = temp;
+            }
+            else
+            {
+                current++;
+            }
+        }
+    }
+}
