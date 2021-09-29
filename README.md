@@ -1,3 +1,3 @@
-# LeetCode_Java
-My solutions to LeetCode problems.
+# Coding_Challenges_Java
+My attempt on several coding challenges.
 Updated daily!
