@@ -25,27 +25,36 @@ n == grid[i].length
 -100 <= grid[i][j] <= 100
 */
 
-class Solution 
-{
-    public int countNegatives(int[][] grid) 
-    {
-        int count = 0;
+class Solution {
+    public int countNegatives(int[][] grid) {
+        int rows = grid.length, cols = grid[0].length;
+        int result = 0, last = grid.length - 1;
         
-        for (int row = 0; row < grid.length; row++)
-        {
-            for (int col = grid[row].length - 1; col >= 0; col--)
-            {
-                if (grid[row][col] < 0)
-                {
-                    count++;
-                }
-                else
-                {
-                    break;
+        for (int i = 0; i < rows; i++) {
+            if (grid[i][0] < 0) {
+                result += cols;
+                continue;
+            }
+            
+            if (grid[i][cols - 1] > 0) {
+                continue;
+            }
+            
+            int left = 0, right = cols - 1;
+            
+            while (left <= right) {
+                int mid = left + (right - left) / 2;
+                if (grid[i][mid] < 0) {
+                    right = mid - 1;
+                } else {
+                    left = mid + 1;
                 }
             }
+            
+            result += cols - left;
+            last = left;
         }
         
-        return count;
+        return result;
     }
 }
