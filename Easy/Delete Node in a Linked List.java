@@ -40,13 +40,10 @@ The node to be deleted is in the list and is not a tail node
  *     ListNode(int x) { val = x; }
  * }
  */
- 
-class Solution 
-{
-    public void deleteNode(ListNode node) 
-    {
-        ListNode nextNode = node.next;
-        node.val = nextNode.val;
-        node.next = nextNode.next;
+
+class Solution {
+    public void deleteNode(ListNode node) {
+        node.val = node.next.val;
+        node.next = node.next.next;
     }
 }
